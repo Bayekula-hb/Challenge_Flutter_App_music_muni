@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movies_app/music.class.dart';
+//import 'package:audioplayer/audioplayer.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -25,6 +26,7 @@ class _MyHomePage extends State<MyHomePage> {
   ];
   late Music musicNow;
   double position = 0.0;
+  //late AudioPlayer audioPlayer;
 
   @override
   void initState() {
@@ -197,4 +199,10 @@ class _MyHomePage extends State<MyHomePage> {
       ),
     );
   }
+}
+
+enum PlayerState {
+  playing,
+  pausing,
+  stoping,
 }
